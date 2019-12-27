@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+div#skinny__reports {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: blue;
+  display: flex;
+}
+
+div#skinny__reports__stage {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
