@@ -1,0 +1,55 @@
+div.summary__item {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 2px;
+  position:  relative;
+  border: 2px solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  color: #333 !important;
+  background-image: linear-gradient(to bottom,rgb(255, 175, 168),rgb(255, 163, 155));
+}
+
+div.summary__item__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+span.summary__item__date__month {
+  z-index: 3;
+  font-size: 30px;
+  color: rgba(0, 0, 0, .3);
+}
+
+span.summary__item__date__day {
+  z-index: 3;
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+}
+
+span.summary__item__date__year {
+  z-index: 3;
+  font-size: 25px;
+}
+
+div.summary__item__percent--passed{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(201, 234, 182);
+}
+div.summary__item__percent--skipped {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(255, 253, 150);
+}
