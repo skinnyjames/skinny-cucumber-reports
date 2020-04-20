@@ -1,0 +1,73 @@
+{
+  "id": "fbfe2b30-0b0f-0138-0040-1263c86ce85d",
+  "date": "2019-12-27 13:49",
+  "features": [
+    {
+      "uri": "features/google.feature",
+      "id": "google",
+      "keyword": "Feature",
+      "name": "Google",
+      "description": "  I can use Google",
+      "line": 1,
+      "elements": [
+        {
+          "id": "google;going-to-google",
+          "keyword": "Scenario",
+          "name": "Going to google",
+          "description": "",
+          "line": 4,
+          "type": "scenario",
+          "before": [
+            {
+              "match": {
+                "location": "features/support/env.rb:31"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 33300
+              }
+            }
+          ],
+          "steps": [
+            {
+              "keyword": "Given ",
+              "name": "I am on google",
+              "line": 5,
+              "match": {
+                "location": "features/step_definitions/google.rb:1"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 575782100
+              }
+            },
+            {
+              "keyword": "When ",
+              "name": "I search cats",
+              "line": 6,
+              "match": {
+                "location": "features/step_definitions/google.rb:7"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 2460461100
+              }
+            },
+            {
+              "keyword": "Then ",
+              "name": "I see results",
+              "line": 7,
+              "match": {
+                "location": "features/step_definitions/google.rb:12"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 694976300
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

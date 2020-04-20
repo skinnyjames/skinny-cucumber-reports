@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './SummaryItem.css';
 import moment = require('moment');
+import { Redirect } from 'react-router-dom';
 
 interface SummaryItemProps {
   id: string;
@@ -9,20 +10,36 @@ interface SummaryItemProps {
   passed: number;
   index: number;
   date: moment.Moment;
+  isClickable: boolean;
 }
-export class SummaryItem extends React.Component<SummaryItemProps, {}> {
+export class SummaryItem extends React.Component<SummaryItemProps, { clicked: boolean }> {
+  constructor(props: SummaryItemProps) {
+    super(props);
+    this.state = { clicked: false }
+  }
   render() {
-    return(
-      <div className="summary__item" style={ this.summaryItemStyle() }>
-        <div style={{ height: this.percentSkipped() }} className="summary__item__percent--skipped"></div>
-        <div style={{ height: this.percentPassed() }} className="summary__item__percent--passed"></div>
-        <div className="summary__item__date">
-          <span className="summary__item__date__month">{ this.month() }</span>
-          <span className="summary__item__date__day">{ this.day() }</span>
-          <span className="summary__item__date__year">{ this.year() } </span>
+    if (this.state.clicked) {
+      return <Redirect push to={ `/details/${this.props.id}`} />;
+    } else { 
+      return(
+        <div onClick={() => { this.navigateToDetails() }} className="summary__item" style={ this.summaryItemStyle() }>
+          <div style={{ height: this.percentSkipped() }} className="summary__item__percent--skipped"></div>
+          <div style={{ height: this.percentPassed() }} className="summary__item__percent--passed"></div>
+          <div className="summary__item__date">
+            <span className="summary__item__date__month">{ this.month() }</span>
+            <span className="summary__item__date__day">{ this.day() }</span>
+            <span className="summary__item__date__year">{ this.year() } </span>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+  }
+
+  navigateToDetails() {
+    if (this.props.isClickable) {
+      this.setState({ clicked: true });
+      return 
+    }
   }
 
   percentPassed() {

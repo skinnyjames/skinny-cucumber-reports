@@ -1,0 +1,15 @@
+div.details {
+  width: 100%;
+  min-height: 100%;
+}
+
+div.details__timestamp {
+  width: calc(100% - 20px);
+  font-size: 13px;
+  padding: 10px;
+  border-bottom: 1px solid #bebebe;
+}
+
+div.details__features {
+  padding: 10px 20px 20px 20px;
+}

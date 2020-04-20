@@ -5,7 +5,12 @@ import './Summary.css';
 interface Summaries {
   [k: string]: Array<any>
 }
-export class Summary extends React.Component<{ activateSummaryGroup: Function, summaries: Summaries, activeSummaryGroup: any }, {}> {
+interface SummaryProps {
+  activateSummaryGroup: Function,
+  summaries: Summaries,
+  activeSummaryGroup: any
+}
+export class Summary extends React.Component<SummaryProps, {}> {
   
   summaryGroupClass(summaryGroup: any) {
     const klass = ['summary__group'];
@@ -53,6 +58,7 @@ export class Summary extends React.Component<{ activateSummaryGroup: Function, s
                           date={ summary.date }
                           skipped={ summary.skipped }
                           passed={ summary.passed }
+                          isClickable={ this.isSummaryClickable(groupedReports) }
                         />
                       )
                     })

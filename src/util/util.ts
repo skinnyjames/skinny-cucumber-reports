@@ -75,4 +75,39 @@ export namespace Util {
       return (memo && step.result.status === status);
     }, true)
   }
+
+  export function failed (scenario: any) {
+      return this.checkStatus(scenario, 'failed')
+  }
+  
+  export function skipped (scenario: any)  {
+      return this.checkStatus(scenario, 'skipped')
+  }
+  
+  export function passed (scenario: any) {
+      return this.checkStatus(scenario, 'passed')
+  }
+
+  export function erroredStep(erroredScenario: any) {
+    return erroredScenario.steps.find((step: any)  => {
+      return step.result.status == 'failed'
+    });
+  }
+
+  export function getEmbeds(scenario: any) {
+    if (!scenario) {
+      return [];
+    }
+    let embeds: Array<any> = []
+    if (scenario.after) {
+      scenario.after.forEach((hook: any) => {
+        if (hook.embeddings && hook.embeddings.length > 0) {
+          embeds = embeds.concat(hook.embeddings);
+        }
+      });
+      return embeds;
+    } else {
+      return [];
+    }
+  }
 }

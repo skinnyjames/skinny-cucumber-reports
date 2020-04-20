@@ -5,6 +5,11 @@ div#summary__heading {
   border-bottom: 1px solid #ccc;
   width: calc(100% - 40px);
 }
+
+div#summary__heading h1 {
+  font-weight: 100;
+}
+
 div#summary__stage {
   display: flex;
   flex-wrap: wrap;
@@ -32,4 +37,5 @@ div.summary__group.summary__modal:before{
   height: 100%;
   top: 0;
   left: 0;
+  transition: background-color .8s !important;
 }

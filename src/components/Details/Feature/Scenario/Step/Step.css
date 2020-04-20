@@ -1,0 +1,18 @@
+div.step {
+  height: 30px;
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, .9);
+  font-size: 14px;
+  background-color: #fafafa;
+  padding: 0px 0px 0px 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+div.step span.step__name {
+  font-size: larger;
+}
+span.step__status {
+  margin-right: 10px;
+}

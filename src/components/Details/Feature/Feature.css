@@ -1,0 +1,47 @@
+div.feature {
+  display: flex;
+  margin: 20px 0;
+}
+div.feature__status {
+  width: 50px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+div.feature__information {
+  margin-left: 10px;
+  width: 100%;
+}
+
+div.feature__information__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+span.feature__information__name__tag {
+  color: #ffff;
+  margin-top: 5px;
+  margin-left: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, .3);
+  padding: 5px;
+}
+
+div.feature__information h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 22px;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, .9);
+}
+
+div.feature__information h3 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, .6);
+  font-weight: normal;
+}
