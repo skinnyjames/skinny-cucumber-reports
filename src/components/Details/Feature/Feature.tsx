@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Feature.css';
 import { Scenario } from './Scenario/Scenario';
-
+import { MdDescription } from 'react-icons/md'
 export class Feature extends React.Component<{ feature: any, setErroredScenario: Function }, {}> {
   render() {
     let tags; 
@@ -11,7 +11,7 @@ export class Feature extends React.Component<{ feature: any, setErroredScenario:
     return (
       <div className="feature">
         <div className="feature__status">
-          <i className="zmdi zmdi-file-text"></i>
+          <MdDescription />
         </div>
         <div className="feature__information">
           <div className="feature__information__name">

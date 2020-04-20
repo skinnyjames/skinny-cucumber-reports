@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Menu.css';
-import { TiHomeOutline } from 'react-icons/ti';
+import { MdHome } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 export class Menu extends React.Component {
@@ -10,7 +10,7 @@ export class Menu extends React.Component {
       <div id="skinny__reports__menu">
         <ul>
           <Link to="/">
-            <li><TiHomeOutline /></li>
+            <li><MdHome/></li>
           </Link>
         </ul>
       </div>
