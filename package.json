@@ -26,7 +26,7 @@
     "css-loader": "^3.4.0",
     "file-loader": "^5.0.2",
     "kind-of": ">=6.0.3",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.2",
     "ts-loader": "^6.2.1",
